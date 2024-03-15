@@ -1,0 +1,123 @@
+#universityList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+/* hover the button of all university list */
+.universityListItem {
+    display: inline-block;
+    width: 200px; /* Adjust width as needed */
+    margin: 10px;
+    text-align: center;
+}
+.universityLink {
+    display: inline-block;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: #35db38; /* Change button color */
+    color: #fff; /* Change text color */
+}
+
+.universityLink:hover {
+    background-color: #0056b3; /* Change button color on hover */
+}
+
+
+/* arrange in row and column all university name  */
+
+#searchResults {
+    display: flex;
+    flex-wrap: wrap; /* Wrap items to the next line when they exceed the container width */
+    justify-content: flex-start; /* Align items to the start of the container */
+}
+
+.universityLink {
+    display: inline-block; /* Change display property */
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    margin-right: 10px; /* Add margin between university names */
+    margin-bottom: 10px; /* Add margin between university names */
+}
+
+.universityLink:hover {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Professional search bar */
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+/* Search container styles */
+.search-container {
+    display: flex;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* Search input styles */
+#searchInput {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Search button styles */
+#searchButton {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#searchButton:hover {
+    background-color: #0056b3;
+}
+
+/* Search results container styles */
+#searchResults {
+    margin-top: 20px;
+}
+
+/* Course styles */
+.course {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.course h3 {
+    margin-top: 0;
+}
+
+.course p {
+    margin-bottom: 0;
+}
