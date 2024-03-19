@@ -64,36 +64,60 @@ const courses = [
             }
         }
     }
-const searchInput = document.getElementById('searchInput');
-            const searchResults = document.getElementById('searchResults');
 
-            function search() {
-                const searchTerm = searchInput.value.toLowerCase();
-                const filteredCourses = courses.filter(course => {
-                    return course.university.toLowerCase().includes(searchTerm);
-                });
-
-                displayResults(filteredCourses);
-            }
-
-            function displayResults(results) {
-                searchResults.innerHTML = '';
-                if (results.length === 0) {
-                    searchResults.innerHTML = '<p>No results found.</p>';
-                } else {
-                    results.forEach(course => {
-                        const link = document.createElement('a');
-                        link.href = course.link;
-                        link.textContent = course.university;
-                        link.classList.add('courseLink');
-                        searchResults.appendChild(link);
-                        searchResults.appendChild(document.createElement('br'));
-                    });
-                }
-            }
-
-            searchInput.addEventListener('input', search);
+    // Function to search universities
+    function search() {
+        const searchTerm = searchInput.value.toLowerCase();
+        const filteredCourses = courses.filter(course => {
+            return course.university.toLowerCase().includes(searchTerm);
         });
+        displayResults(filteredCourses);
+    }
+
+    // Function to display search results
+    function displayResults(results) {
+        const searchResults = document.getElementById('searchResults');
+        searchResults.innerHTML = '';
+        if (results.length === 0) {
+            searchResults.innerHTML = '<p>No results found.</p>';
+        } else {
+            results.forEach(course => {
+                const link = document.createElement('a');
+                link.href = course.link;
+                link.textContent = course.university;
+                link.classList.add('universityLink');
+                searchResults.appendChild(link);
+                searchResults.appendChild(document.createElement('br'));
+            });
+        }
+    }
+
+    // Function to load HTML page
+    function loadHTMLPage(url) {
+        fetch(url)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(html => {
+                document.getElementById('htmlContainer').innerHTML = html;
+            })
+            .catch(error => {
+                console.error('There was a problem fetching the HTML file:', error);
+            });
+    }
+
+    // Example usage:
+    loadHTMLPage(courses[0].link);
+
+    // Event listeners
+    const searchInput = document.getElementById('searchInput');
+    searchInput.addEventListener('input', search);
+});
+// Additional event listeners and initialization can be added here
+
 // Additional event listeners and initialization can be added here
 
 
