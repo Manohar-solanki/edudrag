@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 const courses = [
-    { university: "Lovely Professional University(LPU)", link: "./university_course/Lovely_Professional_University.html" },
+    { university: "Lovely Professional University(LPU)", link: "/university_course/Lovely_Professional_University.html"},
     { university: "University B", link: "https://example.com/lpu" },
     { university: "University A", link: "https://example.com/lpu" },
     { university: "Indian Institute of Technology Bombay", link: "https://example.com/lpu" },
@@ -116,8 +116,6 @@ const courses = [
     const searchInput = document.getElementById('searchInput');
     searchInput.addEventListener('input', search);
 });
-// Additional event listeners and initialization can be added here
-
 // Additional event listeners and initialization can be added here
 
 
