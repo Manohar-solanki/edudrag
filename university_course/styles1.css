@@ -7,32 +7,37 @@
 
 /* Body styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Noto Serif', serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    position: relative;
+    text-align: center;
     padding: 20px;
 }
 
-/* Search container styles */
-.search-container {
-    display: flex;
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    overflow: hidden;
+.container h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
 }
 
-/* Search input styles */
-#searchInput {
+.container .search-container {
+    max-width: 600px;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+}
+
+.container .search-container input[type="text"] {
     flex: 1;
     border: none;
     padding: 10px;
     font-size: 16px;
 }
 
-/* Search button styles */
-#searchButton {
+.container .search-container button {
     background-color: #007bff;
     color: #fff;
     border: none;
@@ -41,55 +46,79 @@ body {
     transition: background-color 0.3s ease;
 }
 
-#searchButton:hover {
+.container .search-container button:hover {
     background-color: #0056b3;
 }
 
-/* Search results container styles */
 #searchResults {
     margin-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
 }
 
-/* Course styles */
-.courseLink {
-    display: inline-block;
-    text-decoration: none;
-    padding: 10px;
-    margin: 10px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
 }
 
-.courseLink:hover {
-    background-color: #f0f0f0;
-    color: #333;
-}
-/* Search button styles */
-#searchButton {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Add transition effect */
+.nav-links {
+    flex: 1;
+    text-align: right;
 }
 
-#searchButton:hover {
-    background-color: #0056b3;
-    color: #fff; /* Change text color on hover */
-}
-
-
-/* gradiant backround  */
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
+.nav-links ul {
     padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.nav-links ul li {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #1fd016;
+    display: block;
+    margin: auto;
+    transition: width 0.5s;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.nav-links ul li a:hover::after {
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    width: 150px;
+}
+
+/* Background Animation */
+body {
     overflow: hidden;
     background: linear-gradient(135deg, #0099ff, #00ccff, #ff99cc, #ff9999, #ff6666);
     background-size: 400% 400%; /* Increase background size for a smoother animation */
@@ -108,37 +137,69 @@ body {
         background-position: 0% 50%;
     }
 }
+/* Professional button styles */
+/* Professional button styles */
+.courseLink {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    text-decoration: none; /* Remove underlines */
+}
 
+.courseLink:hover {
+    background-color: #0056b3;
+}
+
+/* Arrange buttons in equal rows and columns */
+#searchResults {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Adjust alignment */
+}
+
+/* Ensure buttons maintain equal width */
+.courseLink {
+    flex: 0 0 calc(25% - 20px); /* Adjust width as needed */
+}
 .container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
     text-align: center;
     z-index: 1;
+    padding: 20px;
 }
 
-.container h1 {
-    font-size: 4rem;
+.container h2 {
+    font-size: 2rem;
     margin-bottom: 20px;
+    background-color: #fff; /* Set background color */
+    -webkit-text-fill-color: transparent; /* Make text transparent */
+    background: linear-gradient(135deg, #0ad6bf, #ff00d0); /* Set gradient color */
+    -webkit-background-clip: text; /* Clip text to the background gradient */
 }
 
-.container p {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
+.course-list {
+    max-height: 300px; /* Adjust max-height as needed */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 10px; /* Add padding for better appearance */
 }
 
-.button {
-    display: inline-block;
-    padding: 15px 30px;
-    background-color: rgba(255, 255, 255, 0.9);
-    color: #333;
+.course-link {
+    display: block;
+    margin-bottom: 5px; /* Add margin between university links */
     text-decoration: none;
-    border-radius: 30px; /* Round the button corners for a more modern look */
-    transition: background-color 0.3s ease, color 0.3s ease;
+    color: #000; /* Adjust link color */
+    font-size: 16px; /* Adjust font size */
+    transition: color 0.3s; /* Add transition effect */
 }
 
-.button:hover {
-    background-color: rgba(255, 255, 255, 0.7);
-    color: #fff;
+.course-link:hover {
+    color: #007bff; /* Change link color on hover */
 }
