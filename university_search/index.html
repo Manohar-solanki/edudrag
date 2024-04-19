@@ -2,39 +2,97 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>University Search</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- header start  -->
     <section class="header">
         <nav>
-            <a href="index.html"><img src="./educationalWebsite-main\images/logo.png" alt=""></a>
+            <div class="logo">
+                <a href="index.html"><img src="./educationalWebsite-main/images/logo.png" alt=""></a>
+            </div>
             <div class="nav-links" id="navLinks">
-                <!-- <i class="fa-solid fa fa-xmark" onclick="hideMenu()"></i> -->
+                <i class="fa-solid fa fa-xmark" onclick="hideMenu()"></i>
                 <ul>
-                    <li><a href="./Dragon_E-learning_Website-master\index.html">HOME</a></li>
-                    <li><a href="./educationalWebsite-main\about.html">ABOUT</a></li>
-                    <li><a href="./educationalWebsite-main\course.html">COURSE</a></li>
-                    <li><a href="./educationalWebsite-main\blog.html">BLOG</a></li>
-                    <li><a href="./educationalWebsite-main\contact.html">CONTACT</a></li>
+                    <li><a href="./educationalWebsite-main/index.html">HOME</a></li>
+                    <li><a href="./educationalWebsite-main/about.html">ABOUT</a></li>
+                    <li><a href="./educationalWebsite-main/course.html">COURSE</a></li>
+                    <li><a href="./educationalWebsite-main/blog.html">BLOG</a></li>
+                    <li><a href="./educationalWebsite-main/contact.html">CONTACT</a></li>
                 </ul>
             </div>
         </nav>
     </section>
+    
+    
+  <!-- header ended -->
     <div class="container">
-        <h2>ALL University</h2>
-        <div id="background" class="background"></div>
+        <h1>University Search</h1>
         <div class="search-container">
-            <input type="text" id="searchInput" placeholder="Search for a university...">
+            <input type="text" id="searchInput" onkeyup="searchUniversities()" placeholder="Search for a university...">
             <button id="searchButton">Search</button>
         </div>
-        <div id="searchResults" class="university-list"></div>
-        <div id="searchResults"></div>
+        <ul id="universityList">
+            <li class="university-item"><a href="harvard.html"><button class="university-button">Harvard University</button></a></li>
+        <li class="university-item"><a href="stanford.html"><button class="university-button">Stanford University</button></a></li>
+        <li class="university-item"><a href="mit.html"><button class="university-button">Massachusetts Institute of Technology (MIT)</button></a></li>
+        <li class="university-item"><a href="oxford.html"><button class="university-button">University of Oxford</button></a></li>
+        <li class="university-item"><a href="cambridge.html"><button class="university-button">University of Cambridge</button></a></li>
+        <li class="university-item"><a href="LPU.html"><button class="university-button">Lovely Professional University (LPU)</button></a></li>
+        <li class="university-item"><a href="https://www.bits-pilani.ac.in/"><button class="university-button">Birla Institute of Technology and Science (BITS)</button></a></li>
+        <li class="university-item"><a href="https://www.srmist.edu.in/"><button class="university-button">SRM Institute of Science and Technology</button></a></li>
+        <li class="university-item"><a href="https://www.amity.edu/"><button class="university-button">Amity University</button></a></li>
+        <li class="university-item"><a href="https://www.vit.ac.in/"><button class="university-button">Vellore Institute of Technology (VIT)</button></a></li>
+        <li class="university-item"><a href="https://www.manipal.edu/"><button class="university-button">Manipal Academy of Higher Education</button></a></li>
+        <li class="university-item"><a href="https://www.iiit.ac.in/"><button class="university-button">International Institute of Information Technology (IIIT) Hyderabad</button></a></li>
+        <li class="university-item"><a href="https://www.niituniversity.in/"><button class="university-button">NIIT University</button></a></li>
+        <li class="university-item"><a href="https://www.symbiosis.ac.in/"><button class="university-button">Symbiosis International (Deemed University)</button></a></li>
+        <li class="university-item"><a href="https://www.jnu.ac.in/"><button class="university-button">Jawaharlal Nehru University (JNU)</button></a></li>
+        <li class="university-item"><a href="https://www.delhiuniversity.com/"><button class="university-button">University of Delhi</button></a></li>
+        <li class="university-item"><a href="https://www.annauniv.edu/"><button class="university-button">Anna University</button></a></li>
+        <li class="university-item"><a href="https://www.iitm.ac.in/"><button class="university-button">Indian Institute of Technology Madras (IIT Madras)</button></a></li>
+        <li class="university-item"><a href="https://www.mu.ac.in/"><button class="university-button">University of Mumbai</button></a></li>
+        <li class="university-item"><a href="https://www.caluniv.ac.in/"><button class="university-button">University of Calcutta</button></a></li>
+        <li class="university-item"><a href="https://www.bhu.ac.in/"><button class="university-button">Banaras Hindu University (BHU)</button></a></li>
+        <li class="university-item"><a href="https://www.iitkgp.ac.in/"><button class="university-button">Indian Institute of Technology Kharagpur (IIT KGP)</button></a></li>
+        <li class="university-item"><a href="https://www.unom.ac.in/"><button class="university-button">University of Madras</button></a></li>
+        <li class="university-item"><a href="https://www.iitk.ac.in/"><button class="university-button">Indian Institute of Technology Kanpur (IIT Kanpur)</button></a></li>
+        <li class="university-item"><a href="https://www.unipune.ac.in/"><button class="university-button">University of Pune</button></a></li>
+        <li class="university-item"><a href="https://www.dtu.ac.in/"><button class="university-button">Delhi Technological University (DTU)</button></a></li>
+        <li class="university-item"><a href="https://www.iitr.ac.in/"><button class="university-button">Indian Institute of Technology Roorkee (IIT Roorkee)</button></a></li>
+        <li class="university-item"><a href="https://www.hyderabaduniversity.ac.in/"><button class="university-button">University of Hyderabad</button></a></li>
+        <li class="university-item"><a href="https://www.iitg.ac.in/"><button class="university-button">Indian Institute of Technology Guwahati (IIT Guwahati)</button></a></li>
+        <li class="university-item"><a href="https://www.osmania.ac.in/"><button class="university-button">Osmania University</button></a></li>
+        <li class="university-item"><a href="https://www.iimb.ac.in/"><button class="university-button">Indian Institute of Management Bangalore (IIM Bangalore)</button></a></li>
+        <li class="university-item"><a href="https://www.puneuniversity.ac.in/"><button class="university-button">Savitribai Phule Pune University</button></a></li>
+        <li class="university-item"><a href="https://www.iiti.ac.in/"><button class="university-button">Indian Institute of Technology Indore (IIT Indore)</button></a></li>
+        <li class="university-item"><a href="https://www.uoc.ac.in/"><button class="university-button">University of Calicut</button></a></li>
+        <li class="university-item"><a href="https://www.iimcal.ac.in/"><button class="university-button">Indian Institute of Management Calcutta (IIM Calcutta)</button></a></li>
+        <li class="university-item"><a href="https://www.iitmandi.ac.in/"><button class="university-button">Indian Institute of Technology Mandi (IIT Mandi)</button></a></li>
+        <li class="university-item"><a href="https://www.allduniv.ac.in/"><button class="university-button">University of Allahabad</button></a></li>
+        <li class="university-item"><a href="https://www.iiserpune.ac.in/"><button class="university-button">Indian Institute of Science Education and Research Pune (IISER Pune)</button></a></li>
+        <li class="university-item"><a href="https://www.iitrpr.ac.in/"><button class="university-button">Indian Institute of Technology Ropar (IIT Ropar)</button></a></li>
+        <li class="university-item"><a href="https://www.jammuuniversity.ac.in/"><button class="university-button">University of Jammu</button></a></li>
+        <li class="university-item"><a href="https://www.iiml.ac.in/"><button class="university-button">Indian Institute of Management Lucknow (IIM Lucknow)</button></a></li>
+        <li class="university-item"><a href="https://www.iitj.ac.in/"><button class="university-button">Indian Institute of Technology Jodhpur (IIT Jodhpur)</button></a></li>
+        <li class="university-item"><a href="https://www.iisc.ac.in/"><button class="university-button">Indian Institute of Science Education and Research Bhopal (IISER Bhopal)</button></a></li>
+        <li class="university-item"><a href="https://www.iitp.ac.in/"><button class="university-button">Indian Institute of Technology Patna (IIT Patna)</button></a></li>
+        <li class="university-item"><a href="https://www.lkouniv.ac.in/"><button class="university-button">University of Lucknow</button></a></li>
+        <li class="university-item"><a href="https://www.iimraipur.ac.in/"><button class="university-button">Indian Institute of Management Raipur (IIM Raipur)</button></a></li>
+        <li class="university-item"><a href="https://www.iith.ac.in/"><button class="university-button">Indian Institute of Technology Hyderabad (IIT Hyderabad)</button></a></li>
+        <li class="university-item"><a href="https://www.uniraj.ac.in/"><button class="university-button">University of Rajasthan</button></a></li>
+        <li class="university-item"><a href="https://www.nitkkr.ac.in/"><button class="university-button">National Institute of Technology, Kurukshetra (NIT Kurukshetra)</button></a></li>
+        <li class="university-item"><a href="https://www.mnit.ac.in/"><button class="university-button">Malaviya National Institute of Technology, Jaipur (MNIT Jaipur)</button></a></li>
+        <li class="university-item"><a href="https://www.iiitm.ac.in/"><button class="university-button">Indian Institute of Information Technology, Kota (IIIT Kota)</button></a></li>
+        <li class="university-item"><a href="https://www.sanskriti.edu.in/"><button class="university-button">Sanskriti University, Mathura</button></a></li>
+        <li class="university-item"><a href="https://www.mhmtjaipur.com/"><button class="university-button">Mahatma Jyoti Rao Phoole University, Jaipur</button></a></li>
+        <li class="university-item"><a href="https://www.jaipur.manipal.edu/"><button class="university-button">Manipal University, Jaipur</button></a></li>
+
+        </ul>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
