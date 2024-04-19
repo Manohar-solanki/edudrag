@@ -95,7 +95,7 @@ body {
     margin: 0;
     padding: 0;
     background-image: linear-gradient(hwb(0 47% 33% / 0), rgba(0, 0, 0, 0.7), rgba(144, 124, 59, 0.7)),
-    url('/educationalWebsite-main/images/library1.jpg'); /* Replace 'your-background-image.jpg' with the path to your image */
+    url('./educationalWebsite-main/images/library1.jpg'); /* Replace 'your-background-image.jpg' with the path to your image */
     background-size: cover; /* Cover the entire viewport */
     background-repeat: no-repeat; /* Do not repeat the background image */
 }
